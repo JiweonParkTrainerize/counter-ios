@@ -1,7 +1,10 @@
-import { StatusBar } from 'expo-status-bar';
+import { useState, useRef } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-import { NativeModules, NativeEventEmitter } from 'react-native'
+import { NativeModules, NativeEventEmitter, TouchableOpacity, requireNativeComponent, UIManager,
+  findNodeHandle } from 'react-native'
+
+const CounterView = requireNativeComponent("CounterView")
 
 const CounterEvents = new NativeEventEmitter(NativeModules.Counter)
 // subscribe to event
@@ -29,19 +32,51 @@ decrement()
 decrement()
 
 export default function App() {
+  const [count, setCount] = useState(0);
+  const counterRef = useRef(null);
+
+  const onUpdate = (e) => {
+    setCount(e.nativeEvent.count)
+  }
+
+  const updateNative = () => {
+    UIManager.dispatchViewManagerCommand(
+      findNodeHandle(counterRef.current),                     // 1
+      UIManager["CounterView"].Commands.updateFromManager, // 2
+      [count]                                              // 3
+    );
+  }
+
+  const increment = () => {
+    setCount(prev => prev + 1);
+  }
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+        <TouchableOpacity
+          style={[styles.wrapper, styles.border]}
+          onPress={increment}
+          onLongPress={updateNative}
+        >
+          <Text style={styles.button}>
+            {count}
+          </Text>
+        </TouchableOpacity>
+        <CounterView style={styles.wrapper} count={2} onUpdate={onUpdate} ref={counterRef}/>
+      </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    flex: 1, alignItems: "stretch"
   },
+  wrapper: {
+    flex: 1, alignItems: "center", justifyContent: "center"
+  },
+  border: {
+    borderColor: "#eee", borderBottomWidth: 1
+  },
+  button: {
+    fontSize: 50, color: "orange"
+  }
 });

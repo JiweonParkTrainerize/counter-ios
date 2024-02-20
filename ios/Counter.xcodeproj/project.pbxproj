@@ -12,6 +12,9 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2A986BEE2B7BFD2A00336F92 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A986BED2B7BFD2A00336F92 /* Counter.swift */; };
 		2A986BF02B7BFD7300336F92 /* Counter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A986BEF2B7BFD7300336F92 /* Counter.m */; };
+		2A986BF22B802AC800336F92 /* CounterViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A986BF12B802AC800336F92 /* CounterViewManager.swift */; };
+		2A986BF42B802AFB00336F92 /* CounterViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A986BF32B802AFB00336F92 /* CounterViewManager.m */; };
+		2A986BF62B850C6200336F92 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A986BF52B850C6200336F92 /* CounterView.swift */; };
 		3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */; };
 		570A9437A07B4488B48487BE /* noop-file.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329F9A9F1B1A4E6F85DF71B1 /* noop-file.swift */; };
 		96905EF65AED1B983A6B3ABC /* libPods-Counter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 58EEBF8E8E6FB1BC6CAF49B5 /* libPods-Counter.a */; };
@@ -28,6 +31,9 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Counter/main.m; sourceTree = "<group>"; };
 		2A986BED2B7BFD2A00336F92 /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
 		2A986BEF2B7BFD7300336F92 /* Counter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Counter.m; sourceTree = "<group>"; };
+		2A986BF12B802AC800336F92 /* CounterViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewManager.swift; sourceTree = "<group>"; };
+		2A986BF32B802AFB00336F92 /* CounterViewManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CounterViewManager.m; sourceTree = "<group>"; };
+		2A986BF52B850C6200336F92 /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 		329F9A9F1B1A4E6F85DF71B1 /* noop-file.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = "noop-file.swift"; path = "Counter/noop-file.swift"; sourceTree = "<group>"; };
 		58EEBF8E8E6FB1BC6CAF49B5 /* libPods-Counter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Counter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C2E3173556A471DD304B334 /* Pods-Counter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Counter.debug.xcconfig"; path = "Target Support Files/Pods-Counter/Pods-Counter.debug.xcconfig"; sourceTree = "<group>"; };
@@ -65,6 +71,9 @@
 				F32DF77E5AA54919B71C2939 /* Counter-Bridging-Header.h */,
 				2A986BED2B7BFD2A00336F92 /* Counter.swift */,
 				2A986BEF2B7BFD7300336F92 /* Counter.m */,
+				2A986BF52B850C6200336F92 /* CounterView.swift */,
+				2A986BF12B802AC800336F92 /* CounterViewManager.swift */,
+				2A986BF32B802AFB00336F92 /* CounterViewManager.m */,
 			);
 			name = Counter;
 			sourceTree = "<group>";
@@ -318,7 +327,10 @@
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 				B18059E884C0ABDD17F3DC3D /* ExpoModulesProvider.swift in Sources */,
 				2A986BF02B7BFD7300336F92 /* Counter.m in Sources */,
+				2A986BF42B802AFB00336F92 /* CounterViewManager.m in Sources */,
+				2A986BF22B802AC800336F92 /* CounterViewManager.swift in Sources */,
 				570A9437A07B4488B48487BE /* noop-file.swift in Sources */,
+				2A986BF62B850C6200336F92 /* CounterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
